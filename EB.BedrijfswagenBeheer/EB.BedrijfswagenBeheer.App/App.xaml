@@ -4,6 +4,48 @@
              xmlns:local="clr-namespace:EB.BedrijfswagenBeheer.App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Window">
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style TargetType="ContentControl">
+            <Setter Property="Margin" Value="15" />
+        </Style>
+        <Style x:Key="TitelStyle" TargetType="TextBlock">
+            <Setter Property="Background" Value="LightGray" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="0,5,0,5" />
+        </Style>
+
+        <!--<DataTemplate DataType="{x:Type viewmodels:CampussenListViewModel}">
+            <views:CampussenListView></views:CampussenListView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:CampusDetailViewViewModel}">
+            <views:CampusDetailViewView></views:CampusDetailViewView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:CampusDetailEditViewModel}">
+            <views:CampusDetailEditView></views:CampusDetailEditView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:CampusDetailAddViewModel}">
+            <views:CampusDetailAddView></views:CampusDetailAddView>
+        </DataTemplate>-->
+
     </Application.Resources>
 </Application>
