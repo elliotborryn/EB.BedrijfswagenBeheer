@@ -2,11 +2,9 @@ C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\bin\Debug\EB.BedrijfswagenBeheer.App.exe
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\bin\Debug\EB.BedrijfswagenBeheer.App.pdb
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\EB.BedrijfswagenBeheer.App.csprojAssemblyReference.cache
-C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\MainWindow.g.cs
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\App.g.cs
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\EB.BedrijfswagenBeheer.App_MarkupCompile.cache
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\EB.BedrijfswagenBeheer.App_MarkupCompile.lref
-C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\MainWindow.baml
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\EB.BedrijfswagenBeheer.App.g.resources
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\EB.BedrijfswagenBeheer.App.Properties.Resources.resources
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\EB.BedrijfswagenBeheer.App.csproj.GenerateResource.cache
@@ -22,3 +20,15 @@ C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\bin\Debug\EB.BedrijfswagenBeheer.Common.pdb
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\MainWindow.g.cs
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\BedrijvenListView.g.cs
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\App.baml
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\MainWindow.baml
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\BedrijvenListView.baml
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\BedrijfDetailAddView.g.cs
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\BedrijfDetailEditView.g.cs
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\BedrijfDetailViewView.g.cs
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\BedrijfDetailAddView.baml
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\BedrijfDetailEditView.baml
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\BedrijfDetailViewView.baml

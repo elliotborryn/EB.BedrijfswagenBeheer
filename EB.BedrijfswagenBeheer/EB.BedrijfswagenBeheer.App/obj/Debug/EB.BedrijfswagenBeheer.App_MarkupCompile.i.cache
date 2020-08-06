@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\App.xaml
-11892971807
+51416364206
 
-9-1728889020
+16-1433967231
 18-1827825107
-Views\MainWindow.xaml;
+Views\BedrijfDetailAddView.xaml;Views\BedrijfDetailEditView.xaml;Views\BedrijfDetailViewView.xaml;Views\BedrijvenListView.xaml;Views\MainWindow.xaml;
 
 False
 

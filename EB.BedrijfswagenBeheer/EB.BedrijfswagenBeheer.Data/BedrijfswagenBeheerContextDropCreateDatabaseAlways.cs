@@ -18,6 +18,8 @@ namespace EB.BedrijfswagenBeheer.Data
 
             //bedrijf 1 toevoegen + toevoegen aan context
             bedrijf = new Bedrijf("RealDolmen");
+            filiaal = new Filiaal("Groot-Bijgaarden");
+            bedrijf.Filialen.Add(filiaal);
             context.Bedrijven.Add(bedrijf);
 
             //Bedrijf 2 toevoegen

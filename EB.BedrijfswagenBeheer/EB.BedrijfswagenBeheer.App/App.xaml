@@ -2,7 +2,10 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:EB.BedrijfswagenBeheer.App"
-             StartupUri="MainWindow.xaml">
+             xmlns:views="clr-namespace:EB.BedrijfswagenBeheer.App.Views"
+             xmlns:viewmodels="clr-namespace:EB.BedrijfswagenBeheer.App.ViewModels"
+             xmlns:model="clr-namespace:EB.BedrijfswagenBeheer.App.Models"
+             StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
         <Style TargetType="Window">
             <Setter Property="FontSize" Value="20" />
@@ -33,19 +36,23 @@
 
         <!--<DataTemplate DataType="{x:Type viewmodels:CampussenListViewModel}">
             <views:CampussenListView></views:CampussenListView>
-        </DataTemplate>
-
-        <DataTemplate DataType="{x:Type viewmodels:CampusDetailViewViewModel}">
-            <views:CampusDetailViewView></views:CampusDetailViewView>
-        </DataTemplate>
-
-        <DataTemplate DataType="{x:Type viewmodels:CampusDetailEditViewModel}">
-            <views:CampusDetailEditView></views:CampusDetailEditView>
-        </DataTemplate>
-
-        <DataTemplate DataType="{x:Type viewmodels:CampusDetailAddViewModel}">
-            <views:CampusDetailAddView></views:CampusDetailAddView>
         </DataTemplate>-->
+
+        <DataTemplate DataType="{x:Type viewmodels:BedrijvenListViewModel}">
+            <views:BedrijvenListView></views:BedrijvenListView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:BedrijfDetailViewViewModel}">
+            <views:BedrijfDetailViewView></views:BedrijfDetailViewView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:BedrijfDetailEditViewModel}">
+            <views:BedrijfDetailEditView></views:BedrijfDetailEditView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:BedrijfDetailAddViewModel}">
+            <views:BedrijfDetailAddView></views:BedrijfDetailAddView>
+        </DataTemplate>
 
     </Application.Resources>
 </Application>

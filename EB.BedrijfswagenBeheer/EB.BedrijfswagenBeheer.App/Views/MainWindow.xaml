@@ -4,21 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EB.BedrijfswagenBeheer.App"
-        xmlns:views="clr-namespace:EB.BedrijfswagenBeheer.App.Views"
         xmlns:viewmodels="clr-namespace:EB.BedrijfswagenBeheer.App.ViewModels"
         xmlns:model="clr-namespace:EB.BedrijfswagenBeheer.App.Models"
+        xmlns:views="clr-namespace:EB.BedrijfswagenBeheer.App.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="EB - BedrijfswagenBeheer" Height="450" Width="800" >
+
     <Window.DataContext>
         <viewmodels:MainWindowViewModel></viewmodels:MainWindowViewModel>
     </Window.DataContext>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
-        
         <TextBlock
 			 Text="{Binding Titel}"
 			Style="{StaticResource TitelStyle}"
@@ -31,12 +32,10 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
             <ContentControl
 				Content="{Binding CurrentListViewModel}"
 				Grid.Column="0"
 				></ContentControl>
-            
             <ContentControl
 				Content="{Binding CurrentDetailViewModel}"
 				Grid.Column="1"

@@ -93,6 +93,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         #endregion
 
         #region Add Bedrijf
+
         public void AddBedrijf()
         {
             AddBedrijfRequested?.Invoke();
