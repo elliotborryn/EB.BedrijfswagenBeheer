@@ -12,7 +12,7 @@ namespace EB.BedrijfswagenBeheer.Common
 
 		public BaseViewModel()
 		{
-			Titel = "<EB BaseViewModel Titel>";
+			Titel = "Filialen";
 		}
 
 		public String Titel

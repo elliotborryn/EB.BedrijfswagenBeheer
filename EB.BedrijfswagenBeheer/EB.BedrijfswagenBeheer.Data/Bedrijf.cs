@@ -15,7 +15,7 @@ namespace EB.BedrijfswagenBeheer.Data
         internal Bedrijf() : this(null)
         {}
 
-        public Bedrijf(int id, String naam)
+        internal Bedrijf(int id, String naam)
         {
             Id = id;
             Naam = naam;

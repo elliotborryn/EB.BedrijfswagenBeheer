@@ -32,8 +32,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         //Events
         public event Action<Bedrijf> EditBedrijfRequested;
-        public event Action AddBedrijfRequested;
-
+       
         //Properties
         public ObservableCollection<Bedrijf> Bedrijven 
         {
@@ -61,7 +60,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         }
         public RelayCommand DeleteCommand { get; private set; }
         public RelayCommand<Bedrijf> EditCommand { get; private set; }
-        public RelayCommand AddCommand { get; private set; }
 
 
         //Methods
@@ -93,6 +91,9 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         #endregion
 
         #region Add Bedrijf
+
+        public event Action AddBedrijfRequested;
+        public RelayCommand AddCommand { get; private set; }
 
         public void AddBedrijf()
         {

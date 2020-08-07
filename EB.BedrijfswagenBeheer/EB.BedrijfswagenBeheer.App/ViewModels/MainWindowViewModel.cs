@@ -72,14 +72,17 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                     {
                         _bedrijvenListViewModel.PropertyChanged += _bedrijvenListViewModel_PropertyChanged;
                         _bedrijvenListViewModel.EditBedrijfRequested += _bedrijvenListViewModel_EditBedrijfRequested;
-                        //_campussenListViewModel.AddCampusRequested += _campussenListViewModel_AddCampusRequested;
+
+                        _bedrijvenListViewModel.AddBedrijfRequested += _bedrijvenListViewModel_AddBedrijfRequested;
+
                         CurrentListViewModel = _bedrijvenListViewModel;
                     }
                     else
                     {
                         _bedrijvenListViewModel.PropertyChanged -= _bedrijvenListViewModel_PropertyChanged;
                         _bedrijvenListViewModel.EditBedrijfRequested -= _bedrijvenListViewModel_EditBedrijfRequested;
-                        //_campussenListViewModel.AddCampusRequested -= _campussenListViewModel_AddCampusRequested;
+
+                        _bedrijvenListViewModel.AddBedrijfRequested -= _bedrijvenListViewModel_AddBedrijfRequested;
                     }
                     break;
                 default:
@@ -88,12 +91,18 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         }
 
 
+        // COMMENTED
+        //private void _bedrijvenListViewModel_AddBedrijfRequested(bool refreshBedrijven)
+        //{
+        //    SetDetailViewModel(_bedrijfDetailAddViewModel);
+        //    if (refreshBedrijven)
+        //        _bedrijvenListViewModel.RefreshBedrijven();
+        //}
 
-        private void _bedrijvenListViewModel_AddBedrijfRequested(bool refreshBedrijven)
+        // ADDED
+        private void _bedrijvenListViewModel_AddBedrijfRequested()
         {
             SetDetailViewModel(_bedrijfDetailAddViewModel);
-            if (refreshBedrijven)
-                _bedrijvenListViewModel.RefreshBedrijven();
         }
 
         private void _bedrijvenListViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -166,28 +175,13 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             }
         }
 
-        private void _bedrijfDetailAddViewModel_ReturnToViewRequested(bool obj)
+        private void _bedrijfDetailAddViewModel_ReturnToViewRequested(bool refreshBedrijven)
         {
-            throw new NotImplementedException();
+            SetDetailViewModel(_bedrijfDetailViewViewModel);
+            if (refreshBedrijven)
+                _bedrijvenListViewModel.RefreshBedrijven();
         }
 
-        //private void _campusDetailEditViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        //{
-        //    switch (e.PropertyName)
-        //    {
-        //        default:
-        //            break;
-        //    }
-        //}
-
-        //private void _campusDetailViewViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        //{
-        //    switch (e.PropertyName)
-        //    {
-        //        default:
-        //            break;
-        //    }
-        //}
 
         private void _bedrijfDetailEditViewModel_ReturnToViewRequested(bool refreshBedrijven)
         {

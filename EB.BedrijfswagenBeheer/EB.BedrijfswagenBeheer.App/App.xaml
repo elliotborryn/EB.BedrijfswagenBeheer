@@ -34,10 +34,6 @@
             <Setter Property="Margin" Value="0,5,0,5" />
         </Style>
 
-        <!--<DataTemplate DataType="{x:Type viewmodels:CampussenListViewModel}">
-            <views:CampussenListView></views:CampussenListView>
-        </DataTemplate>-->
-
         <DataTemplate DataType="{x:Type viewmodels:BedrijvenListViewModel}">
             <views:BedrijvenListView></views:BedrijvenListView>
         </DataTemplate>

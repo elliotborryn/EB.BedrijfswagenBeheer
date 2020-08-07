@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EB.BedrijfswagenBeheer.App.ViewModels
 {
-    class BedrijfDetailAddViewModel : BaseViewModel
+    public class BedrijfDetailAddViewModel : BaseViewModel
     {
         private BedrijfswagenBeheerRepository _repository;
         private Bedrijf _addBedrijf = new Bedrijf("");

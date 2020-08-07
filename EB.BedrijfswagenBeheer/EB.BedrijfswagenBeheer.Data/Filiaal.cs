@@ -31,7 +31,7 @@ namespace EB.BedrijfswagenBeheer.Data
         //Methodes
         public override string ToString()
         {
-            return $"{Id} - {Naam}";
+            return $"{Naam}";
         }
     }
 }

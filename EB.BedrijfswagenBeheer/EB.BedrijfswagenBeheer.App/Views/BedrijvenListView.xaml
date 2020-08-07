@@ -4,9 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EB.BedrijfswagenBeheer.App.Views"
-             xmlns:views="clr-namespace:EB.BedrijfswagenBeheer.App.Views"
-             xmlns:viewmodels="clr-namespace:EB.BedrijfswagenBeheer.App.ViewModels"
-             xmlns:model="clr-namespace:EB.BedrijfswagenBeheer.App.Models"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>

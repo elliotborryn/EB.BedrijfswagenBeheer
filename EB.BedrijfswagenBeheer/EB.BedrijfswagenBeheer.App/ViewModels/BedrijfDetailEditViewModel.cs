@@ -86,15 +86,15 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         }
 
 
-        //Add
-        public RelayCommand AddCommand { get; set; }
+        ////Add
+        //public RelayCommand AddCommand { get; set; }
 
-        public void AddBedrijf()
-        {
-            Bedrijf = EditBedrijf;
-            _repository.AddBedrijf(Bedrijf);
-            Bedrijf = EditBedrijf = null;
-            ReturnToViewRequested?.Invoke(true);
-        }
+        //public void AddBedrijf()
+        //{
+        //    Bedrijf = EditBedrijf;
+        //    _repository.AddBedrijf(Bedrijf);
+        //    Bedrijf = EditBedrijf = null;
+        //    ReturnToViewRequested?.Invoke(true);
+        //}
     }
 }
