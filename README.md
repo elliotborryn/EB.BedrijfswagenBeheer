@@ -31,6 +31,12 @@ Wagen voorbeeld:
 	* Bezette wagens (#aantal)
 <voorbeeldfoto invoegen>
 
+## Vereiste
+* WPF
+* Entity Framework
+* MVVM
+* CRUD van alle gegevens
+* Databank wordt automatisch gemaakt bij de (eerste) opstart van het project.
 ## Used Software
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) - IDE
