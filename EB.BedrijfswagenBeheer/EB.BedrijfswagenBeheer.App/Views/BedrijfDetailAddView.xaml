@@ -45,15 +45,15 @@
 				Grid.Row="2" Grid.Column="0"
 				></TextBlock>
             <TextBlock
-				Text="{Binding EditBedrijf.Id}"
+				Text="{Binding addBedrijf.Id}"
 				Grid.Row="0" Grid.Column="1"
 				></TextBlock>
             <TextBox
-				Text="{Binding EditBedrijf.Naam}"
+				Text="{Binding addBedrijf.Naam}"
 				Grid.Row="1" Grid.Column="1"
 				></TextBox>
             <ListBox
-				ItemsSource="{Binding Bedrijf.Filialen}"
+				ItemsSource="{Binding addBedrijf.Filialen}"
 				Grid.Row="2" Grid.Column="1"
 				></ListBox>
         </Grid>
