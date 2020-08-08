@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace EB.BedrijfswagenBeheer.App.ViewModels
 {
@@ -191,5 +192,24 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         }
 
         #endregion SetDetailViewModel
+
+        #region AboutPage
+        public RelayCommand AboutCommand { get; private set; }
+
+        public event Action AboutProgramRequested;
+
+        public void OpenAbout()
+        {
+            AboutProgramRequested?.Invoke();
+            Window window = new Window
+            {
+                Title = "About This Program",
+                Content = new AboutViewModel(),
+                SizeToContent = SizeToContent.WidthAndHeight,
+                ResizeMode = ResizeMode.NoResize
+            };
+            window.Show();
+        }
+        #endregion AboutPage
     }
 }

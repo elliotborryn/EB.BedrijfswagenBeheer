@@ -65,6 +65,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\BedrijfDetailAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -90,11 +94,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\BedrijfswagenBeheerRepository.cs" />
+    <Compile Include="ViewModels\AboutViewModel.cs" />
     <Compile Include="ViewModels\BedrijfDetailAddViewModel.cs" />
     <Compile Include="ViewModels\BedrijfDetailEditViewModel.cs" />
     <Compile Include="ViewModels\BedrijfDetailViewViewModel.cs" />
     <Compile Include="ViewModels\BedrijvenListViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BedrijfDetailAddView.xaml.cs">
       <DependentUpon>BedrijfDetailAddView.xaml</DependentUpon>
     </Compile>
@@ -150,6 +158,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\OdiseeSmall.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

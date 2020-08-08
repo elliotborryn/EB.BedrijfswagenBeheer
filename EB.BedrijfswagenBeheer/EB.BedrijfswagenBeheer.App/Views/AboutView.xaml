@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="EB.BedrijfswagenBeheer.App.Views.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EB.BedrijfswagenBeheer.App.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="#FFFFFF">
+    <Grid>
+        <Image Source="/Images/OdiseeSmall.jpg" x:Name="image" HorizontalAlignment="Left" Height="85" Margin="549,10,-17,0" VerticalAlignment="Top" Width="268">
+        </Image>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="35,27,0,0" TextWrapping="Wrap" Text="BedrijfswagenBeheer " VerticalAlignment="Top" Height="89" Width="451" FontSize="40" FontFamily="Trebuchet MS" Foreground="#FF0A0202"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="35,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="250" Width="251" FontSize="22" FontFamily="Microsoft JhengHei UI"><Run FontWeight="Bold" FontSize="24" Text="Auteur"/><Run FontWeight="Bold" FontSize="24" Text=":"/><LineBreak/><Run FontSize="20" Text="Elliot Borryn"/><LineBreak/><Run FontSize="20"/><LineBreak/><Run FontWeight="Bold" FontSize="24" Text="School"/><Run FontWeight="Bold" FontSize="24" Text=":"/><LineBreak/><Run Text="Odisee"/><LineBreak/><Run/><LineBreak/><Run FontWeight="Bold" FontSize="24" Text="Vak:"/><LineBreak/><Run Text="Advanced Application "/><LineBreak/><Run Text="Development"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+           </Grid>
+</UserControl>

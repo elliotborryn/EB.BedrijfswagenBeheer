@@ -34,7 +34,11 @@
                 </MenuItem>
                 <MenuItem Header="_Help">
                     <MenuItem Header="_View Help"/>
-                    <MenuItem Header="_About"/>
+                    <MenuItem Header="_About" Command="{Binding AboutCommand}">
+                        <MenuItem.ToolTip>
+                            <ToolTip>About this app</ToolTip>
+                        </MenuItem.ToolTip>
+                    </MenuItem>
                 </MenuItem>
             </Menu>
         </DockPanel>
