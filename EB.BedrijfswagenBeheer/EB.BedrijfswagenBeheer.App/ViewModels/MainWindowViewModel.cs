@@ -32,6 +32,9 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
             SetListViewModel(_bedrijvenListViewModel);
             SetDetailViewModel(_bedrijfDetailViewViewModel);
+
+            AboutCommand = new RelayCommand(OpenAbout);
+            QuitCommand = new RelayCommand(QuitProgram);
         }
 
         public BaseViewModel CurrentListViewModel
@@ -211,5 +214,16 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             window.Show();
         }
         #endregion AboutPage
+
+        #region QuitProgram
+        public RelayCommand QuitCommand { get; private set; }
+        public event Action QuitProgramRequested;
+
+        public void QuitProgram()
+        {
+            QuitProgramRequested?.Invoke();
+            Application.Current.Shutdown();
+        }
+        #endregion QuitProgram
     }
 }
