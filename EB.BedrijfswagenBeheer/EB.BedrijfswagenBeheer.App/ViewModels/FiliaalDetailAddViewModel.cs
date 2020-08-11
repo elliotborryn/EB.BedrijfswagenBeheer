@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace EB.BedrijfswagenBeheer.App.ViewModels
 {
-    public class BedrijfDetailAddViewModel : BaseViewModel
+    public class FiliaalDetailAddViewModel : BaseViewModel
     {
         private BedrijfswagenBeheerRepository _repository;
-        private Bedrijf _addBedrijf = new Bedrijf("");
+        private Filiaal _addFiliaal = new Filiaal("");
 
 
-        public BedrijfDetailAddViewModel(BedrijfswagenBeheerRepository repository)
+        public FiliaalDetailAddViewModel(BedrijfswagenBeheerRepository repository)
         {
             _repository = repository;
 
@@ -23,18 +23,18 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             SaveCommand = new RelayCommand(SaveChanges);
             CancelCommand = new RelayCommand(CancelChanges);
 
-            Titel = "Add Bedrijf";
+            Titel = "Add Filiaal";
         }
 
 
-        public Bedrijf addBedrijf
+        public Filiaal addFiliaal
         {
-            get { return _addBedrijf; }
+            get { return _addFiliaal; }
             set
             {
-                if (_addBedrijf != value)
+                if (_addFiliaal != value)
                 {
-                    _addBedrijf = value;
+                    _addFiliaal = value;
                     OnPropertyChanged();
                 }
             }
@@ -49,8 +49,8 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         public void SaveChanges()
         {
-            _repository.AddBedrijf(addBedrijf);
-            addBedrijf = new Bedrijf("");
+            _repository.AddFiliaal(addFiliaal);
+            addFiliaal = new Filiaal("");
             ReturnToViewRequested?.Invoke(true);
         }
         #endregion SaveCommand
@@ -60,7 +60,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         public void CancelChanges()
         {
-            addBedrijf = new Bedrijf("");
+            addFiliaal = new Filiaal("");
             ReturnToViewRequested?.Invoke(false);
         }
         #endregion CancelCommand

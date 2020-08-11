@@ -65,23 +65,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\WagenAddViewModel.cs" />
+    <Compile Include="ViewModels\WagenEditViewModel.cs" />
+    <Compile Include="Views\WagenAddView.xaml.cs">
+      <DependentUpon>WagenAddView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WagenEditView.xaml.cs">
+      <DependentUpon>WagenEditView.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\AboutView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BedrijfDetailAddView.xaml">
+    <Page Include="Views\FiliaalDetailAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BedrijfDetailEditView.xaml">
+    <Page Include="Views\FiliaalDetailEditView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BedrijfDetailViewView.xaml">
+    <Page Include="Views\FiliaalDetailViewView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\BedrijvenListView.xaml">
+    <Page Include="Views\FilialenListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -95,30 +103,38 @@
     </Compile>
     <Compile Include="Models\BedrijfswagenBeheerRepository.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
-    <Compile Include="ViewModels\BedrijfDetailAddViewModel.cs" />
-    <Compile Include="ViewModels\BedrijfDetailEditViewModel.cs" />
-    <Compile Include="ViewModels\BedrijfDetailViewViewModel.cs" />
-    <Compile Include="ViewModels\BedrijvenListViewModel.cs" />
+    <Compile Include="ViewModels\FiliaalDetailAddViewModel.cs" />
+    <Compile Include="ViewModels\FiliaalDetailEditViewModel.cs" />
+    <Compile Include="ViewModels\FiliaalDetailViewViewModel.cs" />
+    <Compile Include="ViewModels\FilialenListViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\AboutView.xaml.cs">
       <DependentUpon>AboutView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BedrijfDetailAddView.xaml.cs">
-      <DependentUpon>BedrijfDetailAddView.xaml</DependentUpon>
+    <Compile Include="Views\FiliaalDetailAddView.xaml.cs">
+      <DependentUpon>FiliaalDetailAddView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BedrijfDetailEditView.xaml.cs">
-      <DependentUpon>BedrijfDetailEditView.xaml</DependentUpon>
+    <Compile Include="Views\FiliaalDetailEditView.xaml.cs">
+      <DependentUpon>FiliaalDetailEditView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BedrijfDetailViewView.xaml.cs">
-      <DependentUpon>BedrijfDetailViewView.xaml</DependentUpon>
+    <Compile Include="Views\FiliaalDetailViewView.xaml.cs">
+      <DependentUpon>FiliaalDetailViewView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\BedrijvenListView.xaml.cs">
-      <DependentUpon>BedrijvenListView.xaml</DependentUpon>
+    <Compile Include="Views\FilialenListView.xaml.cs">
+      <DependentUpon>FilialenListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\WagenAddView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WagenEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

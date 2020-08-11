@@ -57,6 +57,7 @@
     <Compile Include="Bedrijf.cs" />
     <Compile Include="BedrijfswagenBeheerContext.cs" />
     <Compile Include="BedrijfswagenBeheerContextDropCreateDatabaseAlways.cs" />
+    <Compile Include="Bestuurder.cs" />
     <Compile Include="Filiaal.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

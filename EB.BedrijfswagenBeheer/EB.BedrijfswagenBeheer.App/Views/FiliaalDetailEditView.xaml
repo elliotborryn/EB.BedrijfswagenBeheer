@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="EB.BedrijfswagenBeheer.App.Views.BedrijfDetailAddView"
+﻿<UserControl x:Class="EB.BedrijfswagenBeheer.App.Views.FiliaalDetailEditView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -45,15 +45,15 @@
 				Grid.Row="2" Grid.Column="0"
 				></TextBlock>
             <TextBlock
-				Text="{Binding addBedrijf.Id}"
+				Text="{Binding EditFiliaal.Id}"
 				Grid.Row="0" Grid.Column="1"
 				></TextBlock>
             <TextBox
-				Text="{Binding addBedrijf.Naam}"
+				Text="{Binding EditFiliaal.Naam}"
 				Grid.Row="1" Grid.Column="1"
 				></TextBox>
             <ListBox
-				ItemsSource="{Binding addBedrijf.Filialen}"
+				ItemsSource="{Binding EditFiliaal.Filialen}"
 				Grid.Row="2" Grid.Column="1"
 				></ListBox>
         </Grid>

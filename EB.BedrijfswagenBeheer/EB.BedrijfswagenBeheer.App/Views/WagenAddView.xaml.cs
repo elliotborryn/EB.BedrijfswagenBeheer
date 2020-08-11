@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace EB.BedrijfswagenBeheer.App.Views
 {
     /// <summary>
-    /// Interaction logic for BedrijvenListView.xaml
+    /// Interaction logic for WagenAddView.xaml
     /// </summary>
-    public partial class BedrijvenListView : UserControl
+    public partial class WagenAddView : UserControl
     {
-        public BedrijvenListView()
+        public WagenAddView()
         {
             InitializeComponent();
         }

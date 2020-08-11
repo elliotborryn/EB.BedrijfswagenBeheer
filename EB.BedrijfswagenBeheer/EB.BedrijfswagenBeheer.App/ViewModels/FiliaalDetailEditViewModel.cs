@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace EB.BedrijfswagenBeheer.App.ViewModels
 {
-    public class BedrijfDetailEditViewModel : BaseViewModel
+    public class FiliaalDetailEditViewModel : BaseViewModel
     {
         //Fields
         private BedrijfswagenBeheerRepository _repository;
-        private Bedrijf _bedrijf;
+        private Filiaal _filiaal;
 
         //Constructors
-        public BedrijfDetailEditViewModel(BedrijfswagenBeheerRepository repository)
+        public FiliaalDetailEditViewModel(BedrijfswagenBeheerRepository repository)
         {
             _repository = repository;
 
@@ -25,36 +25,36 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         }
 
         //Properties
-        public Bedrijf Bedrijf
+        public Filiaal Filiaal
         {
-            get { return _bedrijf; }
+            get { return _filiaal; }
             set
             {
-                if (_bedrijf != value)
+                if (_filiaal != value)
                 {
-                    _bedrijf = value;
+                    _filiaal = value;
                     OnPropertyChanged();
-                    Titel = $"Wijzigen: {Bedrijf}";
-                    EditBedrijf = Bedrijf;
+                    Titel = $"Wijzigen: {Filiaal}";
+                    EditFiliaal = Filiaal;
                 }
             }
         }
 
         //Edit
 
-        private Bedrijf _editBedrijf;
+        private Filiaal _editFiliaal;
 
-        public Bedrijf EditBedrijf
+        public Filiaal EditFiliaal
         {
-            get { return _editBedrijf; }
+            get { return _editFiliaal; }
             set
             {
-                if (_editBedrijf != value)
+                if (_editFiliaal != value)
                 {
                     if (value != null)
-                        _editBedrijf = new Bedrijf(value.Naam);
+                        _editFiliaal = new Filiaal(value.Naam);
                     else
-                        _editBedrijf = value;
+                        _editFiliaal = value;
                     OnPropertyChanged();
                 }
             }
@@ -65,9 +65,9 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         public RelayCommand SaveCommand { get; private set; }
         public void SaveChanges()
         {
-            Bedrijf.Naam = EditBedrijf.Naam;
-            _repository.UpdateBedrijf(Bedrijf);
-            Bedrijf = EditBedrijf = null;
+            Filiaal.Naam = EditFiliaal.Naam;
+            _repository.UpdateFiliaal(Filiaal);
+            Filiaal = EditFiliaal = null;
             ReturnToViewRequested?.Invoke(true);
         }
 
@@ -81,7 +81,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         public void CancelChanges()
         {
-            Bedrijf = EditBedrijf = null;
+            Filiaal = EditFiliaal= null;
             ReturnToViewRequested?.Invoke(false);
         }
 

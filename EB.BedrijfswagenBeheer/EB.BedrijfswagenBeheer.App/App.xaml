@@ -35,22 +35,25 @@
         </Style>
 
         
-        <DataTemplate DataType="{x:Type viewmodels:BedrijvenListViewModel}">
-            <views:BedrijvenListView></views:BedrijvenListView>
+        <DataTemplate DataType="{x:Type viewmodels:FilialenListViewModel}">
+            <views:FilialenListView></views:FilialenListView>
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type viewmodels:BedrijfDetailViewViewModel}">
-            <views:BedrijfDetailViewView></views:BedrijfDetailViewView>
+        <DataTemplate DataType="{x:Type viewmodels:FiliaalDetailViewViewModel}">
+            <views:FiliaalDetailViewView></views:FiliaalDetailViewView>
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type viewmodels:BedrijfDetailEditViewModel}">
-            <views:BedrijfDetailEditView></views:BedrijfDetailEditView>
+        <DataTemplate DataType="{x:Type viewmodels:FiliaalDetailEditViewModel}">
+            <views:FiliaalDetailEditView></views:FiliaalDetailEditView>
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type viewmodels:BedrijfDetailAddViewModel}">
-            <views:BedrijfDetailAddView></views:BedrijfDetailAddView>
+        <DataTemplate DataType="{x:Type viewmodels:FiliaalDetailAddViewModel}">
+            <views:FiliaalDetailAddView></views:FiliaalDetailAddView>
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type viewmodels:WagenAddViewModel}">
+            <views:WagenAddView></views:WagenAddView>
+        </DataTemplate>
 
         <DataTemplate DataType="{x:Type viewmodels:AboutViewModel}">
             <views:AboutView></views:AboutView>

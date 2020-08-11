@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="EB.BedrijfswagenBeheer.App.Views.BedrijvenListView"
+﻿<UserControl x:Class="EB.BedrijfswagenBeheer.App.Views.FilialenListView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -18,8 +18,8 @@
 			Grid.Row="0"
 			 ></TextBlock>
         <ListBox
-			 ItemsSource="{Binding Bedrijven}"
-			 SelectedItem="{Binding SelectedBedrijf}"
+			 ItemsSource="{Binding Filialen}"
+			 SelectedItem="{Binding SelectedFiliaal}"
 			Grid.Row="1"
 			 ></ListBox>
         <StatusBar
@@ -30,7 +30,7 @@
 					  ></Button>
             <Button Content="Wijzigen"
 					  Command="{Binding EditCommand}"
-					  CommandParameter="{Binding SelectedBedrijf}"
+					  CommandParameter="{Binding SelectedFiliaal}"
 					  ></Button>
             <Button Content="Toevoegen"
 					  Command="{Binding AddCommand}"

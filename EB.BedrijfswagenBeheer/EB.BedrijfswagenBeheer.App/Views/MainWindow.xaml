@@ -28,12 +28,12 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top" Grid.Row="0">
                 <MenuItem Header="_File">
-                    <MenuItem Header="_Export.."/>
+                    <MenuItem Header="_Export.." Command="{Binding ExportCommand}"/>
                     <Separator></Separator>
                     <MenuItem Header="_Exit" Command="{Binding QuitCommand}"/>
                 </MenuItem>
                 <MenuItem Header="_Help">
-                    <MenuItem Header="_View Help"/>
+                    <MenuItem Header="_View Help" Command="{Binding HelpCommand}"/>
                     <MenuItem Header="_About" Command="{Binding AboutCommand}">
                         <MenuItem.ToolTip>
                             <ToolTip>About this app</ToolTip>
