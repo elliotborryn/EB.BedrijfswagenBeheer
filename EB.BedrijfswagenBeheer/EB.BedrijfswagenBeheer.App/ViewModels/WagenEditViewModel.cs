@@ -14,6 +14,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         //Fields
         private BedrijfswagenBeheerRepository _repository;
         private Wagen _wagen;
+        private Filiaal _filiaal;
 
         //Constructors
         public WagenEditViewModel(BedrijfswagenBeheerRepository repository)
@@ -38,6 +39,20 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                     EditWagen = Wagen;
                 }
             }
+        }
+
+        public Filiaal Filiaal
+        {
+            get { return _filiaal; }
+            set
+            {
+                if (_filiaal != value)
+                {
+                    _filiaal = value;
+                    OnPropertyChanged();
+                }
+            }
+
         }
 
         //Edit

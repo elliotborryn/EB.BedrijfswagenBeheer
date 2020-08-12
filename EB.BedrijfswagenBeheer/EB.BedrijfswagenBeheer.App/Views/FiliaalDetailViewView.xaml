@@ -61,16 +61,17 @@
 			 Grid.Row="2" Margin="48,0,0,-0.4"
 			 >
             <Button
-				Content="Wagen Toevoegen"
-				Command="{Binding AddWagenCommand}"
+				Content="Toevoegen"
+				Command="{Binding AddCommand}"
 				></Button>
             <Button
-				Content="Wagen Wijzigen"
-				Command="{Binding EditWagenCommand}"
+				Content="Wijzigen"
+				Command="{Binding EditCommand}"
+                CommandParameter="{Binding SelectedWagen}"
 				></Button>
             <Button
-				Content="Wagen Verwijderen"
-				Command="{Binding DeleteWagenCommand}"
+				Content="Verwijderen"
+				Command="{Binding DeleteCommand}"
 				></Button>
         </StatusBar>
     </Grid>

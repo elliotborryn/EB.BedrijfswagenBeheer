@@ -28,9 +28,9 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
             Titel = "Wagens";
 
-            AddWagenCommand = new RelayCommand(AddWagen); 
-            DeleteWagenCommand = new RelayCommand(DeleteWagen, CanDeleteWagen);
-            EditWagenCommand = new RelayCommand<Wagen>(EditWagen, CanEditWagen);
+            AddCommand = new RelayCommand(AddWagen); 
+            DeleteCommand = new RelayCommand(DeleteWagen, CanDeleteWagen);
+            EditCommand = new RelayCommand<Wagen>(EditWagen, CanEditWagen);
         }
 
         //Add Wagen
@@ -118,7 +118,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         //Methods
 
         #region AddWagen
-        public RelayCommand AddWagenCommand { get; private set; }
+        public RelayCommand AddCommand { get; private set; }
 
         public event Action AddWagenRequested;
 
@@ -131,7 +131,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         #endregion AddWagen
 
         #region DeleteWagen
-        public RelayCommand DeleteWagenCommand { get; private set; }
+        public RelayCommand DeleteCommand { get; private set; }
 
         private void DeleteWagen()
         {
@@ -151,7 +151,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         #endregion DeleteWagen
 
         #region EditWagen
-        public RelayCommand<Wagen> EditWagenCommand { get; private set; }
+        public RelayCommand<Wagen> EditCommand { get; private set; }
         public event Action<Wagen> EditWagenRequested;
         public void EditWagen(Wagen wagen)
         {

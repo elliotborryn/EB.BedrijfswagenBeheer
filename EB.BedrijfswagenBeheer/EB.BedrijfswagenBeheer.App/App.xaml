@@ -35,6 +35,7 @@
         </Style>
 
         
+        <!-- FILIALEN -->
         <DataTemplate DataType="{x:Type viewmodels:FilialenListViewModel}">
             <views:FilialenListView></views:FilialenListView>
         </DataTemplate>
@@ -51,8 +52,13 @@
             <views:FiliaalDetailAddView></views:FiliaalDetailAddView>
         </DataTemplate>
 
+        <!-- WAGENS -->
         <DataTemplate DataType="{x:Type viewmodels:WagenAddViewModel}">
             <views:WagenAddView></views:WagenAddView>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewmodels:WagenEditViewModel}">
+            <views:WagenEditView></views:WagenEditView>
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type viewmodels:AboutViewModel}">
