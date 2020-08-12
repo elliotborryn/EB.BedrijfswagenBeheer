@@ -15,25 +15,31 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
     public class MainWindowViewModel : BaseViewModel
     {
         private BedrijfswagenBeheerRepository _repository;
+
+        //Filiaal
         private FilialenListViewModel _filialenListViewModel;
-        private FiliaalDetailViewViewModel _filiaalDetailViewViewModel;
         private FiliaalDetailEditViewModel _filiaalDetailEditViewModel;
         private FiliaalDetailAddViewModel _filiaalDetailAddViewModel;
-        
+
+        //Wagen
+        private FiliaalDetailViewViewModel _filiaalDetailViewViewModel;
         private WagenAddViewModel _wagenAddViewModel;
         private WagenEditViewModel _wagenEditViewModel;
 
-        private BaseViewModel _currentListViewModel;
-        private BaseViewModel _currentDetailViewModel;
+        private BaseViewModel _currentListViewModel; // Linkse Kant
+        private BaseViewModel _currentDetailViewModel; // Rechtse Kant
 
         public MainWindowViewModel()
         {
             _repository = new BedrijfswagenBeheerRepository();
+
+            //Filiaal
             _filialenListViewModel = new FilialenListViewModel(_repository);
-            _filiaalDetailViewViewModel = new FiliaalDetailViewViewModel(_repository);
             _filiaalDetailEditViewModel = new FiliaalDetailEditViewModel(_repository);
             _filiaalDetailAddViewModel = new FiliaalDetailAddViewModel(_repository);
 
+            //Wagen
+            _filiaalDetailViewViewModel = new FiliaalDetailViewViewModel(_repository);
             _wagenAddViewModel = new WagenAddViewModel(_repository);
             _wagenEditViewModel = new WagenEditViewModel(_repository);
 
@@ -89,7 +95,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                     {
                         _filialenListViewModel.PropertyChanged += _filialenListViewModel_PropertyChanged;
                         _filialenListViewModel.EditFiliaalRequested += _filialenListViewModel_EditFiliaalRequested;
-
                         _filialenListViewModel.AddFiliaalRequested += _filialenListViewModel_AddFiliaalRequested;
 
                         CurrentListViewModel = _filialenListViewModel;
@@ -117,11 +122,13 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         //}
 
         // ADDED
+
+        // Request Filiaal Add view
         private void _filialenListViewModel_AddFiliaalRequested()
         {
             SetDetailViewModel(_filiaalDetailAddViewModel);
         }
-
+        
         private void _filialenListViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             switch (e.PropertyName)
@@ -134,6 +141,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             }
         }
 
+        //Request Filiaal Edit View
         private void _filialenListViewModel_EditFiliaalRequested(Data.Filiaal obj)
         {
             SetDetailViewModel(_filiaalDetailEditViewModel);
@@ -150,11 +158,10 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 SetDetailViewModel(CurrentDetailViewModel, false);
             switch (viewModel.GetType().Name)
             {
-                //WagenDetailViewViewModel
+                //WagenDetailViewViewModel: Toon wagens van geselecteerd Filiaal
                 case "FiliaalDetailViewViewModel":
                     if (connect)
                     {
-                        //_campusDetailViewViewModel.PropertyChanged += _campusDetailViewViewModel_PropertyChanged;
                         _filiaalDetailViewViewModel.PropertyChanged += _filiaalDetailViewViewModel_PropertyChanged;
                         _filiaalDetailViewViewModel.AddWagenRequested += _filiaalDetailViewViewModel_AddWagenRequested;
                         _filiaalDetailViewViewModel.EditWagenRequested += _filiaalDetailViewViewModel_EditWagenRequested;
@@ -162,12 +169,12 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                     }
                     else
                     {
-                        // _campussenListViewModel.PropertyChanged -= _campusDetailViewViewModel_PropertyChanged;
                         _filiaalDetailViewViewModel.PropertyChanged -= _filiaalDetailViewViewModel_PropertyChanged;
                         _filiaalDetailViewViewModel.AddWagenRequested -= _filiaalDetailViewViewModel_AddWagenRequested;
                         _filiaalDetailViewViewModel.EditWagenRequested -= _filiaalDetailViewViewModel_EditWagenRequested;
                     }
                     break;
+                    // Filiaal Wijzigen
                 case "FiliaalDetailEditViewModel":
                     if (connect)
                     {
@@ -179,6 +186,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                         _filiaalDetailEditViewModel.ReturnToViewRequested -= _filiaalDetailEditViewModel_ReturnToViewRequested;
                     }
                     break;
+                    //Filiaal Toevoegen
                 case "FiliaalDetailAddViewModel":
                     if (connect)
                     {
@@ -190,6 +198,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                         _filiaalDetailAddViewModel.ReturnToViewRequested -= _filiaalDetailAddViewModel_ReturnToViewRequested;
                     }
                     break;
+                    //Wagen Toevoegen
                 case "WagenAddViewModel":
                     if (connect)
                     {
@@ -201,6 +210,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                         _wagenAddViewModel.ReturnToViewRequested -= _wagenAddViewModel_ReturnToViewRequested;
                     }
                     break;
+                    //Wagen Wijzigen
                 case "WagenEditViewModel":
                     if (connect)
                     {
@@ -227,7 +237,8 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         private void _filiaalDetailViewViewModel_EditWagenRequested(Wagen obj)
         {
             SetDetailViewModel(_wagenEditViewModel);
-            _wagenEditViewModel.Wagen = obj;
+            //_wagenEditViewModel.Wagen = obj;
+            _filiaalDetailViewViewModel.Wagen = obj;
         }
 
         private void _filiaalDetailViewViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -236,7 +247,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             switch (e.PropertyName)
             {
                 case "SelectedWagen":
-                    //_afspraakDetailEdit.Afspraak = _afspraakDetailedView.SelectedAfspraak;
                     _wagenEditViewModel.Wagen = _filiaalDetailViewViewModel.SelectedWagen;
                     break;
                 default:

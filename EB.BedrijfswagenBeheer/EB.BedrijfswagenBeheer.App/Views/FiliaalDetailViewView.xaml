@@ -54,6 +54,7 @@
 				></TextBlock>
             <ListBox
 				ItemsSource="{Binding Filiaal.Wagens}"
+                SelectedItem="{Binding SelectedWagen}"
 				Grid.Row="2" Grid.Column="1"
 				></ListBox>
         </Grid>

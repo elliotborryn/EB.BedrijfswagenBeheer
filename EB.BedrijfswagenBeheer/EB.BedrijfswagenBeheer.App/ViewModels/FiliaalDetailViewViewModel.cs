@@ -1,7 +1,6 @@
 ﻿using EB.BedrijfswagenBeheer.Common;
 using EB.BedrijfswagenBeheer.App.Models;
 using EB.BedrijfswagenBeheer.Data;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +16,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         private BedrijfswagenBeheerRepository _repository;
         private Wagen _wagen;
         private Filiaal _filiaal;
-        //private ObservableCollection<Filiaal> _filialen;
+        private ObservableCollection<Filiaal> _filialen;
         private ObservableCollection<Wagen> _wagens;
         private Wagen _selectedWagen;
 
@@ -28,9 +27,9 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
             Titel = "Wagens";
 
-            AddCommand = new RelayCommand(AddWagen); 
             DeleteCommand = new RelayCommand(DeleteWagen, CanDeleteWagen);
             EditCommand = new RelayCommand<Wagen>(EditWagen, CanEditWagen);
+            AddCommand = new RelayCommand(AddWagen);
         }
 
         //Add Wagen
@@ -47,18 +46,18 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             }
         }
 
-        //public ObservableCollection<Filiaal> Filialen
-        //{
-        //    get { return _filialen; }
-        //    set
-        //    {
-        //        if (_filialen != value)
-        //        {
-        //            _filialen = value;
-        //            OnPropertyChanged();
-        //        }
-        //    }
-        //}
+        public ObservableCollection<Filiaal> Filialen
+        {
+            get { return _filialen; }
+            set
+            {
+                if (_filialen != value)
+                {
+                    _filialen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         //public Filiaal SelectedFiliaal
         //{
@@ -91,7 +90,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         public Filiaal Filiaal
         {
             get { return _filiaal; }
-            set 
+            set
             {
                 if (_filiaal != value)
                 {
@@ -130,13 +129,19 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         #endregion AddWagen
 
+        public void RefreshFilialen()
+        {
+            Filialen = _repository.GetFilialen();
+        }
+
         #region DeleteWagen
         public RelayCommand DeleteCommand { get; private set; }
 
-        private void DeleteWagen()
+        public void DeleteWagen()
         {
             _repository.DeleteWagen(SelectedWagen);
             RefreshWagens();
+            RefreshFilialen();
         }
 
         private Boolean CanDeleteWagen()

@@ -149,7 +149,7 @@ namespace EB.BedrijfswagenBeheer.App.Models
         {
             Wagen wagenToDelete = _context.Wagens.Local.FirstOrDefault(w => w.Id == wagen.Id);
             if (wagenToDelete != null)
-                _context.Wagens .Remove(wagenToDelete);
+                _context.Wagens.Remove(wagenToDelete);
             _context.SaveChanges();
         }
         #endregion
