@@ -35,7 +35,8 @@ namespace EB.BedrijfswagenBeheer.Data
         //Tonen naam van filialen en de aantaal wagens binnenin het filiaal
         public override string ToString()
         {
-            return $"{Naam} (#{Wagens.Count} wagens)";
+            return $"{Naam}";
         }
+
     }
 }

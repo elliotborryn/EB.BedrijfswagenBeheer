@@ -144,8 +144,8 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             if (result == MessageBoxResult.Yes)
             {
                 _repository.DeleteWagen(SelectedWagen);
-                RefreshWagens();
                 RefreshFilialen();
+                RefreshWagens();
             }
             
         }

@@ -54,11 +54,9 @@
 
             <ComboBox
 				Grid.Row="0" Grid.Column="1"
+                ItemsSource="{Binding Filialen}"
+                SelectedItem="{Binding SelectedFiliaal}"
 				>
-                <ComboBoxItem>Groot-Bijgaarden</ComboBoxItem>
-                <ComboBoxItem>Gent</ComboBoxItem>
-                <ComboBoxItem>Brussel</ComboBoxItem>
-                <ComboBoxItem>Mechelen</ComboBoxItem>
             </ComboBox>
             <TextBox
 				Text="{Binding AddWagen.Type}"

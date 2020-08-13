@@ -26,6 +26,9 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         private WagenAddViewModel _wagenAddViewModel;
         private WagenEditViewModel _wagenEditViewModel;
 
+        private VolledigeLijstBedrijfViewModel _volledigeLijstBedrijfViewModel;
+        private Views.VolledigeLijstBedrijfView _totaalLijst;
+
         private BaseViewModel _currentListViewModel; // Linkse Kant
         private BaseViewModel _currentDetailViewModel; // Rechtse Kant
 
@@ -42,6 +45,9 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             _filiaalDetailViewViewModel = new FiliaalDetailViewViewModel(_repository);
             _wagenAddViewModel = new WagenAddViewModel(_repository);
             _wagenEditViewModel = new WagenEditViewModel(_repository);
+
+            _volledigeLijstBedrijfViewModel = new VolledigeLijstBedrijfViewModel(_repository);
+            _totaalLijst = new Views.VolledigeLijstBedrijfView();
 
             Titel = "BedrijfswagenBeheer";
 
@@ -330,8 +336,36 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         private void ExportList()
         {
             ExportListRequested?.Invoke();
-            PrintDialog pd = new PrintDialog();
-            pd.ShowDialog();
+
+            Window window = new Window
+            {
+                Title = "Volledige Lijst Bedrijf",
+                Content = new VolledigeLijstBedrijfViewModel(_repository),
+                SizeToContent = SizeToContent.WidthAndHeight,
+                ResizeMode = ResizeMode.CanResizeWithGrip
+            };
+
+            window.Show();
+
+            PrintDialog printDialog = new PrintDialog();
+            if (printDialog.ShowDialog() == true)
+            {
+                printDialog.PrintVisual(window, "PostB Filialen en Wagens Totaal");
+                MessageBox.Show($"File '{window.Title}' Exported", "File Export", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+
+
+
+            //Window window = new Window
+            //{
+            //    Title = "Volledige Lijst Bedrijf",
+            //    Content = new VolledigeLijstBedrijfViewModel(_repository),
+            //    SizeToContent = SizeToContent.WidthAndHeight,
+            //    ResizeMode = ResizeMode.CanResizeWithGrip
+            //};
+            //window.Show();
+
+            
         }
         #endregion Export End
     }

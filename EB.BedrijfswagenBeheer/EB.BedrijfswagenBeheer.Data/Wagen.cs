@@ -15,6 +15,7 @@ namespace EB.BedrijfswagenBeheer.Data
         private string _type;
         private string _merk;
         private string _bestuurder;
+        private int _filiaal;
 
         //Constructors
         //public Wagen() : this(null, null)
@@ -62,12 +63,23 @@ namespace EB.BedrijfswagenBeheer.Data
             Merk = merk;
             Bestuurder = bestuurder;
         }
+
+        internal Wagen(int id, string type, string merk, string bestuurder, int filiaal)
+        {
+            Id = id;
+            Type = type;
+            Merk = merk;
+            Bestuurder = bestuurder;
+            Filiaal = filiaal;
+        }
         public Wagen(String type, String merk) : this(0, type, merk)
         {
-
         }
 
         public Wagen(String type, String merk, String bestuurder) : this(0, type, merk, bestuurder)
+        { }
+
+        public Wagen(String type, String merk, String bestuurder, int filiaal) : this(0, type, merk, bestuurder, filiaal)
         { }
 
 
@@ -96,6 +108,14 @@ namespace EB.BedrijfswagenBeheer.Data
             get { return _bestuurder; }
             set { _bestuurder = value; }
         }
+
+        public int Filiaal
+        {
+            get { return _filiaal; }
+            set { _filiaal = value; }
+        }
+
+
 
         //public Bestuurder Bestuurder { get; set; }
 

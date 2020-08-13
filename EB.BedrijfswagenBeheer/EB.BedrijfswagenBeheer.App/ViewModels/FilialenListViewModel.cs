@@ -104,5 +104,15 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         }
         #endregion
 
+        #region SortFiliaal
+        //public event Action SortFiliaalRequested;
+        //public RelayCommand SortCommand { get; set; }
+
+        //public void SortFiliaal()
+        //{
+
+        //}
+        #endregion SortFiliaal
+
     }
 }

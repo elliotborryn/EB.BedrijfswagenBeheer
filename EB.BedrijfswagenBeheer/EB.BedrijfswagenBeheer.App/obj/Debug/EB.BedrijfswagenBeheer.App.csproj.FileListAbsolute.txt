@@ -38,3 +38,5 @@ C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\WagenAddView.baml
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\WagenEditView.g.cs
 C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\WagenEditView.baml
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\VolledigeLijstBedrijfView.g.cs
+C:\Users\ellio\Documents\GitHub\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer\EB.BedrijfswagenBeheer.App\obj\Debug\Views\VolledigeLijstBedrijfView.baml

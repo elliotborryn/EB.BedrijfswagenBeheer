@@ -14,15 +14,44 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
     {
         private BedrijfswagenBeheerRepository _repository;
         private Wagen _addWagen = new Wagen("","");
+        private ObservableCollection<Filiaal> _filialen;
+        private Filiaal _selectedFiliaal;
 
         public WagenAddViewModel(BedrijfswagenBeheerRepository repository)
         {
             _repository = repository;
+            _filialen = _repository.GetFilialen();
 
             SaveCommand = new RelayCommand(SaveChanges);
             CancelCommand = new RelayCommand(CancelChanges);
 
             Titel = "Add Wagen";
+        }
+
+        public ObservableCollection<Filiaal> Filialen
+        {
+            get { return _filialen; }
+            set
+            {
+                if (_filialen != value)
+                {
+                    _filialen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public Filiaal SelectedFiliaal
+        {
+            get { return _selectedFiliaal; }
+            set
+            {
+                if (_selectedFiliaal != value)
+                {
+                    _selectedFiliaal = value;
+                    OnPropertyChanged();
+                }
+            }
         }
 
 
@@ -34,7 +63,9 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 if (_addWagen != value)
                 {
                     _addWagen = value;
+                    _selectedFiliaal.Wagens.Add(AddWagen);
                     OnPropertyChanged();
+
                 }
             }
         }
@@ -49,7 +80,8 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         public void SaveChanges()
         {
             _repository.AddWagen(AddWagen);
-            AddWagen = new Wagen("", "");
+            AddWagen = new Wagen(AddWagen.Type, AddWagen.Merk, AddWagen.Bestuurder);
+
             ReturnToViewRequested?.Invoke(true);
         }
         #endregion SaveCommand
@@ -59,7 +91,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         public void CancelChanges()
         {
-            AddWagen = new Wagen("","");
+            //AddWagen = new Wagen("","");
             ReturnToViewRequested?.Invoke(false);
         }
         #endregion CancelCommand

@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:EB.BedrijfswagenBeheer.App.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -18,7 +19,7 @@
 			Grid.Row="0"
 			 ></TextBlock>
         <ListBox
-			 ItemsSource="{Binding Filialen}"
+            ItemsSource="{Binding Filialen, UpdateSourceTrigger=PropertyChanged}"
 			 SelectedItem="{Binding SelectedFiliaal}"
 			Grid.Row="1"
 			 ></ListBox>
@@ -34,6 +35,9 @@
 					  ></Button>
             <Button Content="Toevoegen"
 					  Command="{Binding AddCommand}"
+					  ></Button>
+            <Button Content="Sorteer Alfabetisch"
+					  Command="{Binding SortCommand}"
 					  ></Button>
         </StatusBar>
     </Grid>

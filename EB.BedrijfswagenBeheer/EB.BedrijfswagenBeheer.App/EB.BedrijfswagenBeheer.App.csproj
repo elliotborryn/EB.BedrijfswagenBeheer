@@ -68,8 +68,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\VolledigeLijstBedrijfViewModel.cs" />
     <Compile Include="ViewModels\WagenAddViewModel.cs" />
     <Compile Include="ViewModels\WagenEditViewModel.cs" />
+    <Compile Include="Views\VolledigeLijstBedrijfView.xaml.cs">
+      <DependentUpon>VolledigeLijstBedrijfView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\WagenAddView.xaml.cs">
       <DependentUpon>WagenAddView.xaml</DependentUpon>
     </Compile>
@@ -130,6 +134,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\VolledigeLijstBedrijfView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\WagenAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
