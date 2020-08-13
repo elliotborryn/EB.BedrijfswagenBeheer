@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace EB.BedrijfswagenBeheer.App.ViewModels
 {
@@ -63,7 +64,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 if (_addWagen != value)
                 {
                     _addWagen = value;
-                    _selectedFiliaal.Wagens.Add(AddWagen);
+                    
                     OnPropertyChanged();
 
                 }
@@ -83,6 +84,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             AddWagen = new Wagen(AddWagen.Type, AddWagen.Merk, AddWagen.Bestuurder);
 
             ReturnToViewRequested?.Invoke(true);
+            _selectedFiliaal.Wagens.Add(AddWagen);
         }
         #endregion SaveCommand
 
@@ -91,7 +93,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         public void CancelChanges()
         {
-            //AddWagen = new Wagen("","");
+            AddWagen = new Wagen("","");
             ReturnToViewRequested?.Invoke(false);
         }
         #endregion CancelCommand

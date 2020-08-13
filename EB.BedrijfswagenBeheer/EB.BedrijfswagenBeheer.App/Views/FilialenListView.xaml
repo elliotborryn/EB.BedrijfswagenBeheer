@@ -36,9 +36,9 @@
             <Button Content="Toevoegen"
 					  Command="{Binding AddCommand}"
 					  ></Button>
-            <Button Content="Sorteer Alfabetisch"
+            <!--<Button Content="Sorteer Alfabetisch"
 					  Command="{Binding SortCommand}"
-					  ></Button>
+					  ></Button>-->
         </StatusBar>
     </Grid>
 </UserControl>

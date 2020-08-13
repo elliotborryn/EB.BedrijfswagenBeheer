@@ -118,17 +118,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             }
         }
 
-
-        // COMMENTED
-        //private void _bedrijvenListViewModel_AddBedrijfRequested(bool refreshBedrijven)
-        //{
-        //    SetDetailViewModel(_bedrijfDetailAddViewModel);
-        //    if (refreshBedrijven)
-        //        _bedrijvenListViewModel.RefreshBedrijven();
-        //}
-
-        // ADDED
-
         // Request Filiaal Add view
         private void _filialenListViewModel_AddFiliaalRequested()
         {
@@ -232,6 +221,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                     break;
             }
         }
+
 
         private void _wagenEditViewModel_ReturnToViewRequested(bool refreshWagens)
         {

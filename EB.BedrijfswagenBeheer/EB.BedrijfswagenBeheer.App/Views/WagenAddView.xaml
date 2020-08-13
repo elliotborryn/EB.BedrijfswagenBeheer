@@ -53,20 +53,24 @@
 				></TextBlock>
 
             <ComboBox
+                x:Name="cboxAddWagen"
 				Grid.Row="0" Grid.Column="1"
                 ItemsSource="{Binding Filialen}"
                 SelectedItem="{Binding SelectedFiliaal}"
 				>
             </ComboBox>
             <TextBox
+                x:Name="txtType"
 				Text="{Binding AddWagen.Type}"
 				Grid.Row="1" Grid.Column="1"
 				></TextBox>
             <TextBox
+                x:Name="txtMerk"
 				Text="{Binding AddWagen.Merk}"
 				Grid.Row="2" Grid.Column="1"
 				></TextBox>
             <TextBox
+                x:Name="txtBestuurder"
 				Text="{Binding AddWagen.Bestuurder}"
 				Grid.Row="3" Grid.Column="1"
 				></TextBox>
@@ -77,7 +81,7 @@
 			 >
             <Button
 				Content="Bewaar"
-				Command="{Binding SaveCommand}"
+				Command="{Binding SaveCommand}" Click="Button_Click"
 				></Button>
             <Button
 				Content="Annuleer"
