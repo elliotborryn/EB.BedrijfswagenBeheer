@@ -13,8 +13,7 @@ namespace EB.BedrijfswagenBeheer.Data
     {
         //Constructors
         internal Filiaal() : this(null)
-        { }
-
+        {}
         internal Filiaal(int id, string naam)
         {
             Id = id;

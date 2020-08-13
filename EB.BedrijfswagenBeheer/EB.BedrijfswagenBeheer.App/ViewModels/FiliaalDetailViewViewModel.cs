@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace EB.BedrijfswagenBeheer.App.ViewModels
 {
@@ -139,9 +140,14 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         public void DeleteWagen()
         {
-            _repository.DeleteWagen(SelectedWagen);
-            RefreshWagens();
-            RefreshFilialen();
+            MessageBoxResult result =  MessageBox.Show($"Zeker dat je '{SelectedWagen.ToString()}' wilt verwijderen?", $"Verwijder Wagen", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                _repository.DeleteWagen(SelectedWagen);
+                RefreshWagens();
+                RefreshFilialen();
+            }
+            
         }
 
         private Boolean CanDeleteWagen()

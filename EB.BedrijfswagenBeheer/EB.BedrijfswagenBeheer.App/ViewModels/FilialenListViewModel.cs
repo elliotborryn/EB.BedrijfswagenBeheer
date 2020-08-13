@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace EB.BedrijfswagenBeheer.App.ViewModels
 {
@@ -66,8 +67,10 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         #region DeleteFiliaal
         public void DeleteFiliaal()
         {
-            _repository.DeleteFiliaal(SelectedFiliaal);
-            RefreshFilialen();
+            MessageBoxResult result = MessageBox.Show($"Zeker dat je '{SelectedFiliaal.ToString()}' wilt verwijderen?", $"Verwijder Filiaal", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if(result == MessageBoxResult.Yes)
+                _repository.DeleteFiliaal(SelectedFiliaal);
+                RefreshFilialen();
         }
         private Boolean CanDeleteFiliaal()
         {

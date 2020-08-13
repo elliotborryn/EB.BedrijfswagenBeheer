@@ -40,11 +40,17 @@ namespace EB.BedrijfswagenBeheer.Data
             filiaalZaventem.Wagens.Add(wagen);
             wagen = new Wagen(2, "SUV", "BMW X5", "Jan Janssens");
             filiaalZaventem.Wagens.Add(wagen);
+            wagen = new Wagen(3,"Coupé", "Skoda");
+            filiaalZaventem.Wagens.Add(wagen);
 
             //Wagens toevoegen aan Filiaal Mechelen
             wagen = new Wagen(1, "SUV", "Audi Q3", "Elliot Borryn");
             filiaalMechelen.Wagens.Add(wagen);
             wagen = new Wagen(2, "SUV", "Audi Q5", "Jan Janssens");
+            filiaalMechelen.Wagens.Add(wagen);
+            wagen = new Wagen(3, "Sport", "Ferrari");
+            filiaalMechelen.Wagens.Add(wagen);
+            wagen = new Wagen(4, "Camionette", "Citroën", "Piet Wijsneus");
             filiaalMechelen.Wagens.Add(wagen);
 
             //Wagens toevoegen aan Filiaal Gent
@@ -55,6 +61,8 @@ namespace EB.BedrijfswagenBeheer.Data
             wagen = new Wagen(3, "Camionette", "Citroën", "Piet Wijsneus");
             filiaal.Wagens.Add(wagen);
             wagen = new Wagen(4, "Verhuiswagen", "Mercedes", "Ying Yang");
+            filiaal.Wagens.Add(wagen);
+            wagen = new Wagen(5, "Cabrio", "Peugeot");
             filiaal.Wagens.Add(wagen);
 
             //Context opslaan
