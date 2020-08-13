@@ -185,6 +185,9 @@
   <ItemGroup>
     <Resource Include="sedan.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\company.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
