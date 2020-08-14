@@ -9,27 +9,11 @@ Een wagen heeft een merk, een type en een bestuurder.
 
 Wagen voorbeeld:
 ``
-{id} - {merk} {type} - {bestuurder met id}
+({type}) {merk} - {bestuurder}
 ``
 ``
-48 - Citroën Bestelwagen - Jan Janssens (5)
+(Bestelwagen) Citroën- Jan Janssens
 ``
-
-### Extra's
-* Wagen voorbeeld:
-	* Kenteken letters worden random gemaakt. Getallen achteraan is ID van de wagen.
-
-	* ``
-{kenteken} - {merk} {type} - {bestuurder met id}
-``
-``
-1-ABC-148 - Citroën Bestelwagen - Jan Janssens (5)
-``
-
-* Binnenin een filiaal 2 dropdown lijsten
-	* Beschikbare wagens (#aantal)
-	* Bezette wagens (#aantal)
-<voorbeeldfoto invoegen>
 
 ## Vereiste
 * WPF
@@ -37,6 +21,7 @@ Wagen voorbeeld:
 * MVVM
 * CRUD van alle gegevens
 * Databank wordt automatisch gemaakt bij de (eerste) opstart van het project.
+
 ## Used Software
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) - IDE
