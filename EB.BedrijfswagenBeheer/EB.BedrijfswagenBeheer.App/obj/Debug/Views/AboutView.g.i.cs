@@ -48,22 +48,6 @@ namespace EB.BedrijfswagenBeheer.App.Views {
         #line default
         #line hidden
         
-        
-        #line 12 "..\..\..\Views\AboutView.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock textBlock;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 13 "..\..\..\Views\AboutView.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock textBlock_Copy;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -98,10 +82,12 @@ namespace EB.BedrijfswagenBeheer.App.Views {
             this.image = ((System.Windows.Controls.Image)(target));
             return;
             case 2:
-            this.textBlock = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            case 3:
-            this.textBlock_Copy = ((System.Windows.Controls.TextBlock)(target));
+            
+            #line 19 "..\..\..\Views\AboutView.xaml"
+            ((System.Windows.Documents.Hyperlink)(target)).RequestNavigate += new System.Windows.Navigation.RequestNavigateEventHandler(this.Hyperlink_RequestNavigate);
+            
+            #line default
+            #line hidden
             return;
             }
             this._contentLoaded = true;

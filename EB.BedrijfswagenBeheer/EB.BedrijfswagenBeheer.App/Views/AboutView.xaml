@@ -9,7 +9,19 @@
     <Grid>
         <Image Source="/Images/OdiseeSmall.jpg" x:Name="image" HorizontalAlignment="Left" Height="85" Margin="549,10,-17,0" VerticalAlignment="Top" Width="268">
         </Image>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="35,27,0,0" TextWrapping="Wrap" Text="BedrijfswagenBeheer " VerticalAlignment="Top" Height="89" Width="451" FontSize="40" FontFamily="Trebuchet MS" Foreground="#FF0A0202"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="35,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="250" Width="251" FontSize="22" FontFamily="Microsoft JhengHei UI"><Run FontWeight="Bold" FontSize="24" Text="Auteur"/><Run FontWeight="Bold" FontSize="24" Text=":"/><LineBreak/><Run FontSize="20" Text="Elliot Borryn"/><LineBreak/><Run FontSize="20"/><LineBreak/><Run FontWeight="Bold" FontSize="24" Text="School"/><Run FontWeight="Bold" FontSize="24" Text=":"/><LineBreak/><Run Text="Odisee"/><LineBreak/><Run/><LineBreak/><Run FontWeight="Bold" FontSize="24" Text="Vak:"/><LineBreak/><Run Text="Advanced Application "/><LineBreak/><Run Text="Development"/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-           </Grid>
+        <TextBlock HorizontalAlignment="Left" FontWeight="Bold" Margin="35,27,0,0" TextWrapping="Wrap" Text="BedrijfswagenBeheer " VerticalAlignment="Top" Height="50" Width="451" FontSize="40" FontFamily="Trebuchet MS" Foreground="#FF0A0202"/>
+        <!-- Auteur -->
+        <TextBlock HorizontalAlignment="Left" Margin="35,130,0,0" TextWrapping="Wrap" Text="Auteur" VerticalAlignment="Top" Height="42" Width="104" FontSize="30" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,172,0,0" TextWrapping="Wrap" Text="Elliot Borryn" VerticalAlignment="Top" Height="42" Width="155" FontSize="20"/>
+        <!-- Vak -->
+        <TextBlock HorizontalAlignment="Left" Margin="35,214,0,0" TextWrapping="Wrap" Text="Vak" VerticalAlignment="Top" Height="42" Width="104" FontSize="30" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="349" FontSize="20">
+            <Hyperlink NavigateUri="http://onderwijsaanbod.odisee.be/2019/syllabi/n/OBI42AN.htm#activetab=doelstellingen_idp2139392" RequestNavigate="Hyperlink_RequestNavigate">
+            Advanced Application Development
+            </Hyperlink>
+        </TextBlock>
+
+        <Image Source="/Images/work.png" HorizontalAlignment="Left" Height="200" Margin="384,256,0,-6.4" VerticalAlignment="Top" Width="207">
+        </Image>
+    </Grid>
 </UserControl>
