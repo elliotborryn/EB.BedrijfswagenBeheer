@@ -16,7 +16,7 @@
         <!-- Vak -->
         <TextBlock HorizontalAlignment="Left" Margin="35,214,0,0" TextWrapping="Wrap" Text="Vak" VerticalAlignment="Top" Height="42" Width="104" FontSize="30" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="35,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="349" FontSize="20">
-            <Hyperlink NavigateUri="http://onderwijsaanbod.odisee.be/2019/syllabi/n/OBI42AN.htm#activetab=doelstellingen_idp2139392" RequestNavigate="Hyperlink_RequestNavigate">
+            <Hyperlink NavigateUri="http://onderwijsaanbod.odisee.be/2019/syllabi/n/OBI42AN.htm#activetab=doelstellingen_idp2139392">
             Advanced Application Development
             </Hyperlink>
         </TextBlock>

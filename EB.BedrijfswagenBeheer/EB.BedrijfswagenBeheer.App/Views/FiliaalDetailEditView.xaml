@@ -39,11 +39,11 @@
 				HorizontalAlignment="Right"
 				Grid.Row="1" Grid.Column="0"
 				></TextBlock>
-            <TextBlock
-				Text="Filialen: "
+            <!--<TextBlock
+				Text="Wagens: "
 				HorizontalAlignment="Right"
 				Grid.Row="2" Grid.Column="0"
-				></TextBlock>
+				></TextBlock>-->
             <TextBlock
 				Text="{Binding EditFiliaal.Id}"
 				Grid.Row="0" Grid.Column="1"
@@ -52,10 +52,10 @@
 				Text="{Binding EditFiliaal.Naam}"
 				Grid.Row="1" Grid.Column="1"
 				></TextBox>
-            <ListBox
+            <!--<ListBox
 				ItemsSource="{Binding EditFiliaal.Filialen}"
 				Grid.Row="2" Grid.Column="1"
-				></ListBox>
+				></ListBox>-->
         </Grid>
         <StatusBar
 			 Grid.Row="2"

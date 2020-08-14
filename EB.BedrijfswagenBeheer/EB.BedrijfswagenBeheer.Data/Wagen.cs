@@ -127,7 +127,7 @@ namespace EB.BedrijfswagenBeheer.Data
 
         public override string ToString()
         {
-            return $"{Merk} ({Type}) - {Bestuurder}";
+            return $"({Type}) {Merk} - {Bestuurder}";
         }
     }
 }

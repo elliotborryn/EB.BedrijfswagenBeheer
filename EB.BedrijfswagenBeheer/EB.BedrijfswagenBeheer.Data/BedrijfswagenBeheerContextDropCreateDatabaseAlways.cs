@@ -36,7 +36,7 @@ namespace EB.BedrijfswagenBeheer.Data
             #endregion EndFilialen
 
             //Wagens toevoegen aan Filiaal Zaventem
-            wagen = new Wagen(1, "SUV", "BMW X3", "Elliot Borryn");
+            wagen = new Wagen(1, "SUV", "BMW X5", "Elliot Borryn");
             filiaalZaventem.Wagens.Add(wagen);
             wagen = new Wagen(2, "SUV", "BMW X5", "Jan Janssens");
             filiaalZaventem.Wagens.Add(wagen);
