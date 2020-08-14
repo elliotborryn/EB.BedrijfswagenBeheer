@@ -15,11 +15,12 @@
         <TextBlock HorizontalAlignment="Left" Margin="35,172,0,0" TextWrapping="Wrap" Text="Elliot Borryn" VerticalAlignment="Top" Height="42" Width="155" FontSize="20"/>
         <!-- Vak -->
         <TextBlock HorizontalAlignment="Left" Margin="35,214,0,0" TextWrapping="Wrap" Text="Vak" VerticalAlignment="Top" Height="42" Width="104" FontSize="30" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="35,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="349" FontSize="20">
-            <Hyperlink NavigateUri="http://onderwijsaanbod.odisee.be/2019/syllabi/n/OBI42AN.htm#activetab=doelstellingen_idp2139392">
-            Advanced Application Development
-            </Hyperlink>
+        <TextBlock HorizontalAlignment="Left" Margin="35,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="349" FontSize="20" Text="Advanced Application Development">
+            
         </TextBlock>
+
+        <TextBlock HorizontalAlignment="Left" Margin="35,298,0,0" TextWrapping="Wrap" Text="Over" VerticalAlignment="Top" Height="42" Width="104" FontSize="30" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="100" Width="349" FontSize="20" Text="Een applicatie om het wagenpark van een bedrijf te beheren."></TextBlock>
 
         <Image Source="/Images/work.png" HorizontalAlignment="Left" Height="200" Margin="384,256,0,-6.4" VerticalAlignment="Top" Width="207">
         </Image>

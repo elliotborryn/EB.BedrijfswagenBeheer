@@ -1,9 +1,11 @@
 ﻿using EB.BedrijfswagenBeheer.App.Models;
 using EB.BedrijfswagenBeheer.Common;
 using EB.BedrijfswagenBeheer.Data;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -305,8 +307,12 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         public void QuitProgram()
         {
-            QuitProgramRequested?.Invoke();
-            Application.Current.Shutdown();
+            MessageBoxResult result = MessageBox.Show("Ben je zeker dat je de applicatie wilt verlaten?", "Applicatie Verlaten", MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
+            if (result == MessageBoxResult.Yes)
+            {
+                QuitProgramRequested?.Invoke();
+                Application.Current.Shutdown();
+            }
         }
         #endregion QuitProgram
 
@@ -316,7 +322,10 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         private void HelpProgram()
         {
             HelpProgramRequested?.Invoke();
-            Process.Start(@"C:\Users\ellio\Desktop\AAD_AssignmentDetails.pdf");
+
+            String openPDFFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\BedrijfswagenBeheerHelp.pdf";//PDF DOc name
+            System.IO.File.WriteAllBytes(openPDFFile, global::EB.BedrijfswagenBeheer.App.Properties.Resources.BedrijfswagenBeheerHelp);//the resource automatically creates            
+            System.Diagnostics.Process.Start(openPDFFile);
         }
         #endregion Help PDF
 

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sedan.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("bedrijfswagenbeheericon.ico")]
 
 

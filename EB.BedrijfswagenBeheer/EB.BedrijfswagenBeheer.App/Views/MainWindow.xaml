@@ -28,16 +28,40 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top" Grid.Row="0">
                 <MenuItem Header="_File">
-                    <MenuItem Header="_Export.." Command="{Binding ExportCommand}"/>
+                    <MenuItem Header="_Exporteer.." Command="{Binding ExportCommand}">
+                        <MenuItem.ToolTip>
+                            <ToolTip>Exporteer volledige lijst van het bedrijf</ToolTip>
+                        </MenuItem.ToolTip>
+                        <MenuItem.Icon>
+                            <Image Source="/Images/export.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
                     <Separator></Separator>
-                    <MenuItem Header="_Exit" Command="{Binding QuitCommand}"/>
+                    <MenuItem Header="_Exit" Command="{Binding QuitCommand}">
+                        <MenuItem.ToolTip>
+                            <ToolTip>Sluit de applicatie</ToolTip>
+                        </MenuItem.ToolTip>
+                        <MenuItem.Icon>
+                            <Image Source="/Images/exit.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
                 </MenuItem>
                 <MenuItem Header="_Help">
-                    <MenuItem Header="_View Help" Command="{Binding HelpCommand}"/>
+                    <MenuItem Header="_Bekijk Help" Command="{Binding HelpCommand}">
+                        <MenuItem.ToolTip>
+                            <ToolTip>Hoe gebruik ik de applicatie?</ToolTip>
+                        </MenuItem.ToolTip>
+                        <MenuItem.Icon>
+                            <Image Source="/Images/vraagteken.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
                     <MenuItem Header="_About" Command="{Binding AboutCommand}">
                         <MenuItem.ToolTip>
-                            <ToolTip>About this app</ToolTip>
+                            <ToolTip>Over deze applicatie</ToolTip>
                         </MenuItem.ToolTip>
+                        <MenuItem.Icon>
+                            <Image Source="/Images/information.png"></Image>
+                        </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
             </Menu>
