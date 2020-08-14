@@ -40,8 +40,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             }
         }
 
-        //Edit
-
+        #region EditFiliaal
         private Filiaal _editFiliaal;
 
         public Filiaal EditFiliaal
@@ -60,8 +59,9 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             }
         }
 
+        #endregion
 
-        //Save
+        #region SaveFiliaal
         public RelayCommand SaveCommand { get; private set; }
         public void SaveChanges()
         {
@@ -72,11 +72,11 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         }
 
 
+        #endregion 
 
         public event Action<Boolean> ReturnToViewRequested;
 
-
-        //Cancel
+        #region CancenFiliaal
         public RelayCommand CancelCommand { get; set; }
 
         public void CancelChanges()
@@ -85,16 +85,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             ReturnToViewRequested?.Invoke(false);
         }
 
-
-        ////Add
-        //public RelayCommand AddCommand { get; set; }
-
-        //public void AddBedrijf()
-        //{
-        //    Bedrijf = EditBedrijf;
-        //    _repository.AddBedrijf(Bedrijf);
-        //    Bedrijf = EditBedrijf = null;
-        //    ReturnToViewRequested?.Invoke(true);
-        //}
+        #endregion
     }
 }

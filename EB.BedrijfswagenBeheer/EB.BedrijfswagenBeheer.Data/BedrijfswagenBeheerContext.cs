@@ -11,7 +11,6 @@ namespace EB.BedrijfswagenBeheer.Data
     {
         public BedrijfswagenBeheerContext() : base("dbBedrijfswagenBeheerEB")
         {
-            //Database.Log = Logger.Log;
             Database.SetInitializer(new BedrijfswagenBeheerContextDropCreateDatabaseAlways());
         }
 

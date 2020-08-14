@@ -33,7 +33,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             AddCommand = new RelayCommand(AddWagen);
         }
 
-        //Add Wagen
         public ObservableCollection<Wagen> Wagens
         {
             get { return _wagens; }
@@ -60,21 +59,8 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             }
         }
 
-        //public Filiaal SelectedFiliaal
-        //{
-        //    get { return _selectedFiliaal; }
-        //    set
-        //    {
-        //        if (_selectedFiliaal != value)
-        //        {
-        //            _selectedFiliaal = value;
-        //            OnPropertyChanged();
-        //        }
-        //    }
-        //}
-
+       
         //Properties
-
         public Wagen Wagen
         {
             get { return _wagen; }

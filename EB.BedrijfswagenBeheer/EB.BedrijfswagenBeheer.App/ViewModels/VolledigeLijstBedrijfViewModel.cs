@@ -26,12 +26,8 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             _filialen = _repository.GetFilialen();
             _wagens = _repository.GetWagens();
 
-            //PrintCommand = new RelayCommand(PrintLijst);
 
         }
-
-        
-
 
         //Properties
         public ObservableCollection<Filiaal> Filialen
@@ -46,7 +42,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 }
             }
         }
-
         public ObservableCollection<Wagen> Wagens
         {
             get { return _wagens; }
@@ -59,16 +54,5 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 }
             }
         }
-
-
-        //public RelayCommand PrintCommand { get; private set}
-        //private void PrintLijst()
-        //{
-        //    PrintDialog printDialog = new PrintDialog();
-        //    if (printDialog.ShowDialog() == true)
-        //    {
-        //        printDialog.PrintVisual("PostB Filialen en Wagens Totaal");
-        //    }
-        //}
     }
 }

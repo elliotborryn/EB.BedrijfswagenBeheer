@@ -28,6 +28,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         private WagenAddViewModel _wagenAddViewModel;
         private WagenEditViewModel _wagenEditViewModel;
 
+        //TotaalLijst PDF
         private VolledigeLijstBedrijfViewModel _volledigeLijstBedrijfViewModel;
         private Views.VolledigeLijstBedrijfView _totaalLijst;
 
@@ -48,6 +49,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             _wagenAddViewModel = new WagenAddViewModel(_repository);
             _wagenEditViewModel = new WagenEditViewModel(_repository);
 
+            //TotaalLijst PDF
             _volledigeLijstBedrijfViewModel = new VolledigeLijstBedrijfViewModel(_repository);
             _totaalLijst = new Views.VolledigeLijstBedrijfView();
 
@@ -61,9 +63,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             HelpCommand = new RelayCommand(HelpProgram);
             ExportCommand = new RelayCommand(ExportList);
         }
-
-        
-
         public BaseViewModel CurrentListViewModel
         {
             get { return _currentListViewModel; }
@@ -76,7 +75,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 }
             }
         }
-
         public BaseViewModel CurrentDetailViewModel
         {
             get { return _currentDetailViewModel; }
@@ -323,8 +321,8 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         {
             HelpProgramRequested?.Invoke();
 
-            String openPDFFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\BedrijfswagenBeheerHelp.pdf";//PDF DOc name
-            System.IO.File.WriteAllBytes(openPDFFile, global::EB.BedrijfswagenBeheer.App.Properties.Resources.BedrijfswagenBeheerHelp);//the resource automatically creates            
+            String openPDFFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\BedrijfswagenBeheerHelp.pdf";
+            System.IO.File.WriteAllBytes(openPDFFile, global::EB.BedrijfswagenBeheer.App.Properties.Resources.BedrijfswagenBeheerHelp);            
             System.Diagnostics.Process.Start(openPDFFile);
         }
         #endregion Help PDF
@@ -352,19 +350,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 printDialog.PrintVisual(window, "PostB Filialen en Wagens Totaal");
                 MessageBox.Show($"File '{window.Title}' Exported", "File Export", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-
-
-
-            //Window window = new Window
-            //{
-            //    Title = "Volledige Lijst Bedrijf",
-            //    Content = new VolledigeLijstBedrijfViewModel(_repository),
-            //    SizeToContent = SizeToContent.WidthAndHeight,
-            //    ResizeMode = ResizeMode.CanResizeWithGrip
-            //};
-            //window.Show();
-
-            
         }
         #endregion Export End
     }

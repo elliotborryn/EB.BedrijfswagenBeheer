@@ -28,7 +28,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
             Titel = "Add Wagen";
         }
-
         public ObservableCollection<Filiaal> Filialen
         {
             get { return _filialen; }
@@ -41,7 +40,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 }
             }
         }
-
         public Filiaal SelectedFiliaal
         {
             get { return _selectedFiliaal; }
@@ -54,8 +52,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 }
             }
         }
-
-
         public Wagen AddWagen
         {
             get { return _addWagen; }
@@ -71,9 +67,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             }
         }
 
-
         public event Action<Boolean> ReturnToViewRequested;
-
 
         #region SaveCommand
         public RelayCommand SaveCommand { get; private set; }
