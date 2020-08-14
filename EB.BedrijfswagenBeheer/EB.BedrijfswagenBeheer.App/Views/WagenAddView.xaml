@@ -37,7 +37,7 @@
 				Grid.Row="0" Grid.Column="0"
 				></TextBlock>
             <TextBlock
-				Text="Naam Bestuurder: "
+				Text="Bestuurder: "
 				HorizontalAlignment="Right"
 				Grid.Row="1" Grid.Column="0"
 				></TextBlock>

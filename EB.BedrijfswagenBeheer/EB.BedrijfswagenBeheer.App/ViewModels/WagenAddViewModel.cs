@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace EB.BedrijfswagenBeheer.App.ViewModels
@@ -14,7 +15,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
     class WagenAddViewModel :  BaseViewModel
     {
         private BedrijfswagenBeheerRepository _repository;
-        private Wagen _addWagen = new Wagen("","");
+        private Wagen _addWagen = new Wagen("", "", "");
         private ObservableCollection<Filiaal> _filialen;
         private Filiaal _selectedFiliaal;
 
@@ -52,6 +53,11 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 }
             }
         }
+
+        public void RefreshFilialen()
+        {
+            Filialen = _repository.GetFilialen();
+        }
         public Wagen AddWagen
         {
             get { return _addWagen; }
@@ -60,7 +66,6 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
                 if (_addWagen != value)
                 {
                     _addWagen = value;
-                    
                     OnPropertyChanged();
 
                 }
@@ -77,6 +82,8 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             _repository.AddWagen(AddWagen);
             AddWagen = new Wagen(AddWagen.Type, AddWagen.Merk, AddWagen.Bestuurder);
 
+            //AddWagen = new Wagen("", "", "");
+
             ReturnToViewRequested?.Invoke(true);
             _selectedFiliaal.Wagens.Add(AddWagen);
         }
@@ -87,7 +94,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         public void CancelChanges()
         {
-            AddWagen = new Wagen("","");
+            AddWagen = new Wagen("", "", "");
             ReturnToViewRequested?.Invoke(false);
         }
         #endregion CancelCommand

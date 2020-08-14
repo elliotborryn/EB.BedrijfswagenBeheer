@@ -69,6 +69,11 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             _repository.UpdateFiliaal(Filiaal);
             Filiaal = EditFiliaal = null;
             ReturnToViewRequested?.Invoke(true);
+
+            if (true)
+            {
+
+            }
         }
 
 
