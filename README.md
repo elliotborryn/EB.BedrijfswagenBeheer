@@ -43,17 +43,6 @@ Wagen voorbeeld:
 * [Microsoft SQL Management Studio](https://visualstudio.microsoft.com/vs/) - Database
 
 
-## Release History
-
-* 0.0.2
-	* Define Datalayer, Applayer and Common
-
-* 0.0.1
-    * Initial Create
-
-
-
-
 ## Authors
 
 * **Elliot Borryn** - [GitHub Link](https://github.com/elliotborryn)
