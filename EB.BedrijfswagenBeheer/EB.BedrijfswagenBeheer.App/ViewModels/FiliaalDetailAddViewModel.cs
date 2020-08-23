@@ -49,6 +49,7 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
 
         public void SaveChanges()
         {
+            
             _repository.AddFiliaal(addFiliaal);
             addFiliaal = new Filiaal("");
             ReturnToViewRequested?.Invoke(true);

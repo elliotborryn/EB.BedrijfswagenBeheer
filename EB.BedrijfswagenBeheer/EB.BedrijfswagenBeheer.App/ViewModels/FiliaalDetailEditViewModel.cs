@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace EB.BedrijfswagenBeheer.App.ViewModels
 {
@@ -65,14 +66,18 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         public RelayCommand SaveCommand { get; private set; }
         public void SaveChanges()
         {
-            Filiaal.Naam = EditFiliaal.Naam;
-            _repository.UpdateFiliaal(Filiaal);
-            Filiaal = EditFiliaal = null;
-            ReturnToViewRequested?.Invoke(true);
+           
 
-            if (true)
+            if (_filiaal == null)
             {
-
+                MessageBox.Show("Filiaal bestaat niet meer");
+            }
+            else
+            {
+                Filiaal.Naam = EditFiliaal.Naam;
+                _repository.UpdateFiliaal(Filiaal);
+                Filiaal = EditFiliaal = null;
+                ReturnToViewRequested?.Invoke(true);
             }
         }
 

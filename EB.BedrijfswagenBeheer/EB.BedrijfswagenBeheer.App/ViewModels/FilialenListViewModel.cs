@@ -67,10 +67,19 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
         #region DeleteFiliaal
         public void DeleteFiliaal()
         {
-            MessageBoxResult result = MessageBox.Show($"Zeker dat je '{SelectedFiliaal.ToString()}' wilt verwijderen?", $"Verwijder Filiaal", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if(result == MessageBoxResult.Yes)
-                _repository.DeleteFiliaal(SelectedFiliaal);
+            
+
+            if (SelectedFiliaal == null)
+            {
+                MessageBox.Show("Filiaal is leeg");
+            }
+            else
+            {
+                MessageBoxResult result = MessageBox.Show($"Zeker dat je '{SelectedFiliaal.ToString()}' wilt verwijderen?", $"Verwijder Filiaal", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                    _repository.DeleteFiliaal(SelectedFiliaal);
                 RefreshFilialen();
+            }
         }
         private Boolean CanDeleteFiliaal()
         {

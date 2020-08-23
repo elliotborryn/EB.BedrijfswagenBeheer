@@ -85,7 +85,14 @@ namespace EB.BedrijfswagenBeheer.App.ViewModels
             //AddWagen = new Wagen("", "", "");
 
             ReturnToViewRequested?.Invoke(true);
-            _selectedFiliaal.Wagens.Add(AddWagen);
+            if (_selectedFiliaal == null)
+            {
+                MessageBox.Show("Wagen is leeg");
+            }
+            else
+            {
+                _selectedFiliaal.Wagens.Add(AddWagen);
+            }
         }
         #endregion SaveCommand
 
